@@ -28,7 +28,7 @@ export default class index extends React.Component {
    PinjiuApi.joinList('all',15 , 1, '').then(res => {
      if (res.isSuccess) {
        this.setState({dataList: res.result});
-      } else {
+      }else{
        AppCommon.showRespError(res);
      }
    })
@@ -38,7 +38,7 @@ export default class index extends React.Component {
    PinjiuApi.joinCount().then(res =>{
      if(res.isSuccess) {
        this.setState({dinDan: res.result});
-     }else {
+     }else{
       AppCommon.showRespError(res);
     }
    })

@@ -96,4 +96,7 @@ dindanxiangqing: async (id) => {
   addMessage: async (pinjiuId,question) => {
     return request("app/pinjiuMessage/addMessage", {method: 'POST', data: {pinjiuId,question}});
   },
+  wuliu: async (id) => {
+    return request("/app/pinjiuMenu/wuliu",{method: 'POST', data: {id}})
+  }
 }
