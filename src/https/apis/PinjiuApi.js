@@ -72,8 +72,19 @@ pdxqDetails: async (id) => {
 dindanxiangqing: async (id) => {
   return request('/app/pinjiuMenu/loadPayInfo', {method:'POST', data: {id}});
 },
+/**
+ * 发起者显示详情
+ */
+faqizhe: async(createUserId,searchUserId,type,pinjiuStatus, pageNo, pageSize) => {
+  return request('/app/pinjiuMenu/listAllAppByCreateUser', {method:'POST', data: {createUserId,searchUserId,type,pinjiuStatus, pageNo, pageSize}});
+},
+/**
+ * 显示物流详情 
+ */
 
-
+wuliu: async (id) => {
+  return request("/app/pinjiuMenu/wuliu",{method: 'POST', data: {id}})
+},
   faqipindan: async () => {
     return request("app/group/mySimpleGroups", {method: 'POST', data: {}});
   },
@@ -96,7 +107,4 @@ dindanxiangqing: async (id) => {
   addMessage: async (pinjiuId,question) => {
     return request("app/pinjiuMessage/addMessage", {method: 'POST', data: {pinjiuId,question}});
   },
-  wuliu: async (id) => {
-    return request("/app/pinjiuMenu/wuliu",{method: 'POST', data: {id}})
-  }
 }

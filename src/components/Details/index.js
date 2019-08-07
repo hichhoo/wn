@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './index.less';
-import {returnStatement, thisExpression} from '@babel/types';
+import { returnStatement, thisExpression } from '@babel/types';
 import AppCommon from '../../utils/AppCommon';
-import {Switch, Icon} from 'antd';
-import {extname} from 'path';
+import { Switch, Icon } from 'antd';
+import { extname } from 'path';
 import PinjiuApi from "../../https/apis/PinjiuApi";
 import { futimes } from 'fs';
 
@@ -14,23 +14,23 @@ export default class Details extends React.Component {
       list: [],
     }
   }
-  
+
   render() {
-    const {item = {}} = this.props;
+    const { item = {} } = this.props;
     return (
-      <div className={styles.Card}  onClick={() =>{
-        if(item.payable) {
-          AppCommon.routerPush('/pinjiu/dindanxiangqing/?id='+item.pinjiuMenuId )          
+      <div className={styles.Card} onClick={() => {
+        if (item.payable) {
+          AppCommon.routerPush('/pinjiu/dindanxiangqing/?id=' + item.pinjiuMenuId)
         } else {
-          AppCommon.routerPush('/pinjiu/pindanxiangqing/?id='+item.id ) 
+          AppCommon.routerPush('/pinjiu/pindanxiangqing/?id=' + item.id)
         }
 
       }} >
         <div className={styles.WineImg}>
-            <img className={styles.tlzicon} src={AppCommon.wrapperImgPath(item.image)}/>
+          <img className={styles.tlzicon} src={AppCommon.wrapperImgPath(item.image)} />
         </div>
         <div className={styles.txt}>
-          <div className = {styles.winename}>
+          <div className={styles.winename}>
             {item.userNickname}
             <span className={styles.hui}>（发起人）</span>
           </div>
@@ -44,7 +44,7 @@ export default class Details extends React.Component {
             <span className={styles.perpo}>{item.avgPrice}/{item.unit}</span>
           </p>
         </div>
-          <TransStatus pinjiuStatus={item.pinjiuStatus}/>
+        <TransStatus pinjiuStatus={item.pinjiuStatus} />
       </div>
     );
   }
@@ -63,15 +63,15 @@ function TransStatus(props) {
     return <span>交易完成</span>;
   } else if (pinjiuStatus == "waitPay") {
     return <span>待付款（支持线下支付）</span>;
-  } else if (pinjiuStatus == "ready"){
+  } else if (pinjiuStatus == "ready") {
     return <span>待拼单</span>;
-  } else if (pinjiuStatus == "sending"){
-  return <span>待收货</span>;
-  } else if(pinjiuStatus == "waitSend"){
-  return <span>待发货</span>;
-  }else if (pinjiuStatus == null){
-  return <span>待处理</span>;
-  } else{
+  } else if (pinjiuStatus == "sending") {
+    return <span>待收货</span>;
+  } else if (pinjiuStatus == "waitSend") {
+    return <span>待发货</span>;
+  } else if (pinjiuStatus == null) {
+    return <span>待处理</span>;
+  } else {
     return <span>交易关闭</span>;
   }
 }

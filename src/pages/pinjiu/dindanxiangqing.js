@@ -19,6 +19,7 @@ export default class Orderdetails extends React.Component{
     componentDidMount(){
         let a = this.props.location.query;
         this.getData(a.id);
+        // console.log(this.props.location.query);
         // this.getwuliu(a.id);
     }
 
@@ -146,7 +147,6 @@ export default class Orderdetails extends React.Component{
 function DindanStatus(props) {
     var status = props.status;
     var deleteReason = props.deleteReason;
-    console.log(props.status);
     if (status == "del"){
         return <div className = {styles.orderstatus}>
                 <div className = {styles.orderd}>

@@ -18,7 +18,9 @@ export default class Userdetails extends React.Component{
     render(){
         const {item = {}} = this.props;
         return(
-            <div className = {styles.card}>
+            <div className = {styles.card} onClick={()=>{
+                AppCommon.routerPush('/pinjiu/pindanliebiao/?id='+item.id)
+            }}>
                 <div className = {styles.img}>
                     <img className = {styles.userimg} src={AppCommon.wrapperImgPath(item.image)}/>
                 </div>
