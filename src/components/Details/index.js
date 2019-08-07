@@ -13,7 +13,7 @@ export default class Details extends React.Component {
     this.state = {
       list: [],
     }
-  };
+  }
   
   render() {
     const {item = {}} = this.props;
@@ -69,7 +69,7 @@ function TransStatus(props) {
   return <span>待收货</span>;
   } else if(pinjiuStatus == "waitSend"){
   return <span>待发货</span>;
-  }else if (pinjiuStatus == "refund"){
+  }else if (pinjiuStatus == null){
   return <span>待处理</span>;
   } else{
     return <span>交易关闭</span>;
