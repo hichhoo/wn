@@ -60,7 +60,7 @@ export default class Pindanliebiao extends React.Component {
                         <div className={styles.clear}></div>
                     </flex>
                     <div className={styles.hengxian}></div>
-                    <div className={styles.status}>
+                    <div className={styles.status1}>
                         <span className={styles.span0}>统计</span>
                         <span className={styles.span2}>状态：</span>
                         <span className={styles.span1}>未完成交易</span>
@@ -104,17 +104,53 @@ export default class Pindanliebiao extends React.Component {
                             </div>
                             <div className={styles.txt}>
                                 <div className={styles.winename}>
-                                    
-                                    <span className={styles.hui}>（发起人）</span>
                                 </div>
-                                <div className={styles.intru}>item.name</div>
+                                <div className={styles.intru}>88年普罗旺斯红葡萄酒（品牌：Vinues Nuier Kuive)</div>
                                 <p className={styles.listtime}>发起时间：item.createTime</p>
                                 <p className={styles.listtime}>截止时间：item.cutoffTime</p>
                                 <p>
                                     数量：
-                                <span className={styles.perpo}>{item.currentOrderAmount}/{item.allAmount}</span>
+                                <span className={styles.perpo}>item.c</span>
                                     '&nbsp;&nbsp;价格：'
-                                <span className={styles.perpo}>{item.avgPrice}/{item.unit}</span>
+                                <span className={styles.perpo}>item.avgPrice/item.unit</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className={styles.Card}>
+                            <div className={styles.WineImg}>
+                                <img className={styles.tlzicon} src={AppCommon.wrapperImgPath()} />
+                            </div>
+                            <div className={styles.txt}>
+                                <div className={styles.winename}>
+                                </div>
+                                <div className={styles.intru}>88年普罗旺斯红葡萄酒（品牌：Vinues Nuier Kuive)</div>
+                                <p className={styles.listtime}>发起时间：item.createTime</p>
+                                <p className={styles.listtime}>截止时间：item.cutoffTime</p>
+                                <p>
+                                    数量：
+                                <span className={styles.perpo}>item.c</span>
+                                    '&nbsp;&nbsp;价格：'
+                                <span className={styles.perpo}>item.avgPrice/item.unit</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className={styles.Card}>
+                            <div className={styles.WineImg}>
+                                <img className={styles.tlzicon} src={AppCommon.wrapperImgPath()} />
+                            </div>
+                            <div className={styles.txt}>
+                                <div className={styles.winename}>
+                                </div>
+                                <div className={styles.intru}>88年普罗旺斯红葡萄酒（品牌：Vinues Nuier Kuive)</div>
+                                <p className={styles.listtime}>发起时间：item.createTime</p>
+                                <p className={styles.listtime}>截止时间：item.cutoffTime</p>
+                                <p>
+                                    数量：
+                                <span className={styles.perpo}>item.c</span>
+                                    '&nbsp;&nbsp;价格：'
+                                <span className={styles.perpo}>item.avgPrice/item.unit</span>
                                 </p>
                             </div>
                         </div>

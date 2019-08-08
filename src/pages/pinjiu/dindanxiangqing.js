@@ -19,8 +19,8 @@ export default class Orderdetails extends React.Component{
     componentDidMount(){
         let a = this.props.location.query;
         this.getData(a.id);
-        // console.log(this.props.location.query);
-        // this.getwuliu(a.id);
+        console.log(this.props.location.query);
+        this.getwuliu(a.id);
     }
 
 ///////////////////
